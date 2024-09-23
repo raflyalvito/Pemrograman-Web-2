@@ -3,6 +3,6 @@
 $topi = "Topi";
 $bundar = "Bundar";
 
-$topi . "saya" . $bundar . $bundar . $topi . "saya";
+echo $topi .  " saya " . $bundar . ", ". $bundar  . " ". $topi . " saya";
 
 ?>
