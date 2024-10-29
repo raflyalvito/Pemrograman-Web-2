@@ -2,13 +2,12 @@
 $headers = [
             "No", 
             "Nama",
+            "Gambar",
             "Tempat Lahir", 
             "Tanggal Lahir", 
             "Julukan", 
-            "Meninggal", 
-            "Gambar"
+            "Meninggal" 
         ];
-
 $pahlawan = [
     [
         "Nama" => "Ir. Soekarno",
@@ -91,7 +90,6 @@ $pahlawan = [
         "Gambar" => "img/diponegoro.jpg"
     ]
     ];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,21 +108,20 @@ $pahlawan = [
 </head>
 <body>
     <table border="2" cellpadding="3" cellspacing="3">
-        <?php foreach($headers as $header): ?>
-            <th><?=  $header?></th>
-            
-           
-        <?php endforeach ; ?>
-
+            <tr>
+                <?php foreach($headers as $header): ?>
+                    <th><?=  $header?></th>
+                <?php endforeach ; ?>
+            </tr>
         <?php foreach($pahlawan as $index => $pahlwn) : ?>
             <tr>
                 <td><?= $index + 1 ?></td> 
                 <td><?= $pahlwn['Nama'] ?></td>
+                <td style="display: flex; justify-content: center;"><img src="<?= $pahlwn['Gambar']?>" weight="50" height="50" ></td>
                 <td><?= $pahlwn['Tempat Lahir'] ?></td>
                 <td><?= $pahlwn['Tanggal Lahir'] ?></td>
                 <td><?= $pahlwn['Julukan'] ?></td>
                 <td><?= $pahlwn['Meninggal']?></td>
-                <td style="display: flex; justify-content: center;"><img src="<?= $pahlwn['Gambar']?>" weight="50" height="50" ></td>
             </tr>
         <?php endforeach ; ?>
 
